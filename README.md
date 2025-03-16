@@ -1,10 +1,10 @@
-# 🤖 Automated Customer Support Chatbot
+# 🤖 Hybrid Rasa + OpenAI GPT Customer Support Chatbot
 
-An AI-powered chatbot designed to automate customer support using **OpenAI’s GPT models** or **Rasa**. It supports multi-platform deployment and provides a customizable backend.
+An AI-powered chatbot that integrates **Rasa's conversation management** with **OpenAI's GPT models**, ensuring both structured dialogue control and natural language understanding.  
 
 ## 📌 Project Information
 
-- **Version:** 1.0.0  
+- **Version:** 1.1.0  
 - **Author:** Faisal Hakimi  
 - **Email:** [your-email@example.com](mailto:your-email@example.com)  
 - **Website:** [Your Portfolio](https://yourportfolio.com)  
@@ -16,12 +16,12 @@ An AI-powered chatbot designed to automate customer support using **OpenAI’s G
 
 ## 🌟 Features
 
-✔️ 🚀 **AI-powered chatbot using GPT-4 / Rasa NLU**  
+✔️ 🚀 **Hybrid AI chatbot (Rasa + GPT-4)**  
 ✔️ 📲 **Multi-platform support (Web, Telegram, WhatsApp, Discord)**  
-✔️ 🔍 **Context-aware customer support automation**  
+✔️ 🔍 **Context-aware conversation flow**  
 ✔️ 📈 **Logging & analytics for performance tracking**  
-✔️ ⚙️ **Customizable intent recognition and response management**  
-✔️ 🛠️ **Scalable backend API**  
+✔️ ⚙️ **Customizable intent recognition & responses**  
+✔️ 🛠️ **Scalable API & cloud deployment support**  
 
 ---
 
@@ -29,14 +29,14 @@ An AI-powered chatbot designed to automate customer support using **OpenAI’s G
 
 ```
 customer-support-chatbot/
-├─ data/             # Stores training data (FAQs, customer queries, responses)
-├─ models/           # Holds trained chatbot models
-├─ backend/          # Handles API and chatbot logic
-├─ frontend/         # User interface integrations (Telegram, Web, etc.)
+├─ data/             # Rasa training data (FAQs, customer queries)
+├─ models/           # Trained chatbot models
+├─ backend/          # API and chatbot logic
+├─ frontend/         # UI integrations (Telegram, Web, etc.)
 ├─ logs/             # Logs interactions for analysis
-├─ requirements.txt  # Lists dependencies for installation
-├─ config.yml        # Configuration file for chatbot settings
-└─ README.md         # Project documentation
+├─ requirements.txt  # Dependencies
+├─ config.yml        # Rasa chatbot configuration
+└─ README.md         # Documentation
 ```
 
 ---
@@ -57,6 +57,7 @@ customer-support-chatbot/
 
 - Python 3.8+  
 - pip  
+- Rasa CLI  
 - Git  
 
 ### 🛠️ Steps
@@ -73,12 +74,12 @@ pip install -r requirements.txt
 ```
 
 3️⃣ **Set Up API Keys**  
-Create a `.env` file and add your API keys:
+Create a `.env` file and add:
 ```sh
 OPENAI_API_KEY="your_api_key_here"
 ```
 
-4️⃣ **Train the Model (For Rasa Users)**
+4️⃣ **Train the Rasa Model**
 ```sh
 rasa train
 ```
@@ -92,10 +93,12 @@ rasa train
   ```sh
   rasa run --enable-api
   ```
+- **Hybrid (Rasa + GPT)**:
+  ```sh
+  python backend/hybrid_chatbot.py
+  ```
 
-6️⃣ **Deployment (Optional)**
-- Deploy on Render, AWS, or Firebase  
-- Use Docker for containerized deployment  
+6️⃣ **Deploy using Docker (Optional)**
 ```sh
 docker build -t chatbot .
 docker run -p 8000:8000 chatbot
