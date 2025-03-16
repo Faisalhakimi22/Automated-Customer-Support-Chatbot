@@ -1,0 +1,12 @@
+# .gitignore
+.env
+chatbot_env/
+.rasa/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+*.tar.gz  # Optional: exclude model files (they’re big)
