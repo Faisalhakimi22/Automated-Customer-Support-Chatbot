@@ -132,7 +132,7 @@ docker run -p 8000:8000 chatbot
 - **Commit changes & submit a PR**  
 - Open issues for suggestions 🚀  
 
-📩 **For support, contact:** [your-email@example.com](mailto:your-email@example.com)  
+📩 **For support, contact:** [email](mailto:faisalh5556@gmail.com)  
 
 ---
 
