@@ -6,7 +6,7 @@ An AI-powered chatbot that integrates **Rasa's conversation management** with **
 
 - **Version:** 1.1.0  
 - **Author:** Faisal Hakimi  
-- **Email:** [your-email@example.com](mailto:your-email@example.com)  
+- **Email:** [your-email@example.com](mailto:email)  
 - **Website:** [Your Portfolio](https://yourportfolio.com)  
 - **Repository:** [GitHub Repo](https://github.com/your-username/customer-support-chatbot)  
 - **License:** MIT License  
