@@ -1,4 +1,4 @@
-# 🤖 Hybrid Rasa + OpenAI GPT Customer Support Chatbot
+#  Hybrid Rasa + OpenAI GPT Customer Support Chatbot
 
 An AI-powered chatbot that integrates **Rasa's conversation management** with **OpenAI's GPT models**, ensuring both structured dialogue control and natural language understanding.  
 
@@ -7,7 +7,7 @@ An AI-powered chatbot that integrates **Rasa's conversation management** with **
 - **Version:** 1.1.0  
 - **Author:** Faisal Hakimi  
 - **Email:** [email](faisalh5556@gmail.com)  
-- **Website:** [Portfolio](https://yourportfolio.com)  
+- **Website:** [Portfolio]([https://yourportfolio.com](https://hakimi-portfolio-0.vercel.app/))  
 - **Repository:** [GitHub Repo](https://github.com/Faisalhakimi22/Automated-Customer-Support-Chatbot/tree/main)  
 - **License:** MIT License  
 - **Last Updated:** 2024-08-03  
