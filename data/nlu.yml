@@ -40,6 +40,116 @@ nlu:
     - don't like that
     - no way
     - not really
+- intent: bot_challenge
+  examples: |
+    - are you a bot
+    - are you human
+    - am I talking to a bot
+    - am I talking to a human
+    - are you real
+    - are you artificial
+    - are you automated
+- intent: hotel_find_hotel
+  examples: |
+    - I need a hotel
+    - find me a hotel
+    - I want to book a hotel
+    - hotel booking
+    - I need accommodation
+    - find accommodation
+    - hotel in [centre](area)
+    - [expensive](pricerange) hotel
+    - [cheap](pricerange) hotel
+    - [moderate](pricerange) hotel
+    - [guesthouse](hotel_type)
+    - [hotel](hotel_type) with [free](parking) parking
+    - [5](stars) star hotel
+- intent: hotel_book_hotel
+  examples: |
+    - book a hotel
+    - I want to book a hotel
+    - make a hotel reservation
+    - reserve a hotel room
+    - book accommodation
+    - hotel reservation for [2](people) people
+    - book for [3](stay) nights
+    - book on [monday](day)
+- intent: train_find_train
+  examples: |
+    - find a train
+    - train schedule
+    - train times
+    - I need a train
+    - train from [london kings cross](departure) to [cambridge](destination)
+    - train leaving at [10:30](leaveat)
+    - train on [wednesday](day)
+- intent: train_book_train
+  examples: |
+    - book a train ticket
+    - I want to book a train
+    - train reservation
+    - book train from [london](departure) to [cambridge](destination)
+    - book for [2](people) people
+    - train on [friday](day) at [14:30](leaveat)
+- intent: attraction_find_attraction
+  examples: |
+    - find attractions
+    - what to see
+    - tourist attractions
+    - places to visit
+    - attractions in [centre](area)
+    - [museum](type) attractions
+    - [park](type) to visit
+    - [theatre](type) shows
+- intent: restaurant_find_restaurant
+  examples: |
+    - find a restaurant
+    - I'm looking for a restaurant
+    - restaurant recommendations
+    - places to eat
+    - restaurant in [centre](area)
+    - [expensive](pricerange) restaurant
+    - [italian](food) restaurant
+    - [cheap](pricerange) food
+- intent: restaurant_book_restaurant
+  examples: |
+    - book a restaurant
+    - restaurant reservation
+    - book table
+    - reserve restaurant
+    - book for [4](people) people
+    - book on [saturday](day) at [19:00](time)
+- intent: hospital_find_hospital
+  examples: |
+    - find a hospital
+    - I need a hospital
+    - hospital near me
+    - emergency room
+    - hospital with [cardiology](department) department
+    - medical center
+- intent: taxi_book_taxi
+  examples: |
+    - book a taxi
+    - I need a taxi
+    - taxi service
+    - cab booking
+    - taxi from [hotel](departure) to [airport](destination)
+    - taxi at [08:00](leaveat)
+- intent: bus_find_bus
+  examples: |
+    - find bus
+    - bus schedule
+    - bus times
+    - public transport
+    - bus from [centre](departure) to [airport](destination)
+    - bus on [wednesday](day)
+- intent: police_police
+  examples: |
+    - police station
+    - I need the police
+    - emergency services
+    - police help
+    - [parkside police station](name)
 - intent: product_inquiry
   examples: |
     - Tell me about [product name](product)
@@ -98,84 +208,13 @@ nlu:
     - Do you ship internationally?
     - What payment methods do you accept?
     - How long is the warranty?
-    - Do you have a loyalty program?
-    - What's your privacy policy?
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-    - who are you?
-    - what are you?
+    - What services do you offer?
+    - Can you help me?
 - intent: fallback
   examples: |
-    - xyz
-    - asdf
-    - qwerty
-- intent: hotel_find_hotel
-  examples: |
-    - I want to find a hotel
-    - Can you help me find a hotel?
-    - Find me a hotel in [east](area)
-    - Looking for a [cheap](pricerange) hotel
-- intent: hotel_book_hotel
-  examples: |
-    - Book a hotel for me
-    - I need to reserve a hotel
-    - Can you book a [guesthouse](hotel_type) for [2](people) people?
-    - Hotel booking for [monday](day)
-- intent: train_find_train
-  examples: |
-    - Find me a train
-    - What trains go to [cambridge](destination)?
-    - Train schedule from [london kings cross](departure)
-    - I need a train at [10:00](leaveat)
-- intent: train_book_train
-  examples: |
-    - Book a train ticket
-    - Reserve a train for [3](people) people
-    - I want a train to [norwich](destination) on [tuesday](day)
-    - Book train leaving [peterborough](departure)
-- intent: attraction_find_attraction
-  examples: |
-    - Find an attraction in [north](area)
-    - What’s a good [museum](type) to visit?
-    - Tell me about attractions nearby
-    - Any [park](type) recommendations?
-- intent: restaurant_find_restaurant
-  examples: |
-    - Find me a restaurant
-    - Recommend a [cheap](pricerange) place to eat
-    - Any [italian](food) restaurants in [west](area)?
-    - Where can I eat out?
-- intent: restaurant_book_restaurant
-  examples: |
-    - Book a table at a restaurant
-    - Reserve a spot for [4](people) people
-    - I need a restaurant booking for [friday](day) at [7pm](time)
-    - Table for [moderate](pricerange) dining
-- intent: hospital_find_hospital
-  examples: |
-    - Where’s the nearest hospital?
-    - Find a hospital with [cardiology](department)
-    - Hospital address in [south](area)
-    - Tell me about local hospitals
-- intent: taxi_book_taxi
-  examples: |
-    - Book a taxi for me
-    - I need a cab to [cambridge](destination)
-    - Taxi from [east](departure) at [5pm](leaveat)
-    - Reserve a [sedan](type) taxi
-- intent: bus_find_bus
-  examples: |
-    - Find a bus schedule
-    - What buses go to [west](destination)?
-    - Bus leaving [north](departure) on [wednesday](day)
-    - Tell me about bus routes
-- intent: police_police
-  examples: |
-    - Where’s the police station?
-    - Find [parkside police station](name)
-    - Police contact number
-    - Nearest police in [centre](area)
+    - I don't understand
+    - What do you mean?
+    - Can you rephrase that?
+    - I'm confused
+    - That doesn't make sense
+    - Help me understand

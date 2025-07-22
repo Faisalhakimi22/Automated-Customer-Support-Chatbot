@@ -1,13 +1,14 @@
 from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
-import openai
+import requests
 import os
 from dotenv import load_dotenv
 
 # Load environment variables from .env
 load_dotenv()
-openai.api_key = os.getenv("OPENAI_API_KEY")
+
+LLM_API_URL = os.getenv("LLM_API_URL", "http://localhost:8000/chat")
 
 class ActionAskGPT(Action):
     def name(self) -> Text:
@@ -32,29 +33,22 @@ class ActionAskGPT(Action):
         
         conversation_history.reverse()
         
-        # Construct messages for OpenAI
-        messages = [
-            {"role": "system", "content": "You are a helpful customer support assistant. Be concise, friendly, and helpful."},
-            *conversation_history,  # Unpack history into the list
-            {"role": "user", "content": user_message}
-        ]
+        # Prepare messages for LLM API
+        messages = conversation_history
         
         try:
-            # Call OpenAI API (using latest SDK syntax)
-            response = openai.chat.completions.create(
-                model="gpt-3.5-turbo",  # Switch to "gpt-4" if you have access
-                messages=messages,
-                max_tokens=150,
-                temperature=0.7
-            )
-            
-            # Extract the response
-            gpt_response = response.choices[0].message.content.strip()
-            
-            # Send to user
-            dispatcher.utter_message(text=gpt_response)
+            payload = {
+                "message": user_message,
+                "history": messages,
+                "model": os.getenv("OLLAMA_MODEL", "mistral")
+            }
+            response = requests.post(LLM_API_URL, json=payload, timeout=60)
+            response.raise_for_status()
+            data = response.json()
+            llm_response = data.get("response", "Sorry, I didn't understand that.")
+            dispatcher.utter_message(text=llm_response)
         except Exception as e:
-            dispatcher.utter_message(text="I'm having trouble connecting to my knowledge base. Please try again later.")
-            print(f"OpenAI API Error: {e}")
-            
+            dispatcher.utter_message(text="I'm having trouble connecting to my local LLM. Please try again later.")
+            print(f"LLM API Error: {e}")
+        
         return []
