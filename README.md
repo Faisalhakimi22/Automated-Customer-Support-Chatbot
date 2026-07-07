@@ -2,6 +2,7 @@
   
 # Automated Customer Support Chatbot
 
+</div>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Rasa-3.6-blue?logo=rasa" alt="Rasa"/>
