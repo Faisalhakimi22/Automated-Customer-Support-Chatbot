@@ -1,3 +1,4 @@
+<div align="center">
 # Automated Customer Support Chatbot
 
 <p align="center">
